@@ -1,10 +1,9 @@
 import styles from '../styles/testing.module.css';
 import { useState } from 'react';
 
+import { testGrid } from '../utils/testGrid';
+
 export default function Testing(){
-  const testGrid = [
-    
-  ];
   const [myGrid, setMyGrid] = useState({
     currentGrid: '6x20',
     cellContents: [{}]
@@ -12,46 +11,15 @@ export default function Testing(){
 
   return (
           <section className={styles.gridLayout}>
-              <div>One</div>
-              <div>Two</div>
-              <div>Three</div>
-              <div>Four</div>
-              <div>Five</div>
-              <div>Six</div>
-              <div>One</div>
-              <div>Two</div>
-              <div>Three</div>
-              <div>Four</div>
-              <div>Five</div>
-              <div>Six</div>
-              <div>One</div>
-              <div>Two</div>
-              <div>Three</div>
-              <div>Four</div>
-              <div>Five</div>
-              <div>Six</div>
-              <div>One</div>
-              <div>Two</div>
-              <div>Three</div>
-              <div>Four</div>
-              <div>Five</div>
-              <div>Six</div>
-              <div>One</div>
-              <div>Two</div>
-              <div>Three</div>
-              <div>Four</div>
-              <div>Five</div>
-              <div>Six</div>
-              <div>One</div>
-              <div>Two</div>
-              <div>Three</div>
-              <div>Four</div>
-              <div>Five</div>
-              <div>Six</div>
-              <div>One</div>
-              <div>Two</div>
-              <div>Three</div>
-              <div>Four</div>
+              {
+                testGrid.map((cell, index) => {
+                  return (
+                    <div>
+                      { index }
+                    </div>
+                    )
+                })
+              }
           </section>
   );
 }
