@@ -1,0 +1,26 @@
+:root {
+  --cell-size: 75px;
+}
+
+.gridLayout {
+  background-color: red;
+  margin: auto;
+  margin-top: 1.5em;
+  padding: 0;
+  width: 375px;
+
+
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(5, var(--cell-size));
+  grid-auto-rows: minmax(var(--cell-size), var(--cell-size));
+}
+
+section > div {
+  border: dotted;
+  background-color: grey;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  align-content: center;
+}
